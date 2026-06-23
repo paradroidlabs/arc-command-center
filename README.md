@@ -155,7 +155,7 @@ Update the player name in `src/data/api-client.js` to point to your ARC Tracker 
 
 See the full [roadmap.md](roadmap.md) for planned features and improvements. Highlights:
 
-- **Customizable Dashboard** — Drag-and-drop card layout with resizable panels (GridStack.js)
+- **Responsive Reflow Layout** — CSS-native responsive reflow for seamless module scaling across viewports
 - **In-App Tooltips** — Contextual explanations for metrics like Survival Rate, Net Profit, and Time Topside
 - **Raid Data Export** — Export raw JSON data from the UI
 - **Map Performance Sorting** — Clickable column headers in the performance table

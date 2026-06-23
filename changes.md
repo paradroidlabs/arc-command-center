@@ -2,6 +2,8 @@
 
 ## [Latest]
 
+- **Documentation**: Complete repository initialization for public GitHub release — added comprehensive README, architecture diagrams, and Paradroid Labs AI operational framework.
+
 - **Features**: Updated the Blueprints Shortcut card to display the number of acquired vs missing blueprints with a progress bar.
 
 - **Features**: Added a new Blueprints Shortcut card to the Tactical Brief page to quickly access the Blueprints Archive.

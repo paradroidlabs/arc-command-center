@@ -8,8 +8,9 @@ This document outlines upcoming features, UX/UI improvements, and planned explan
 - **Custom Challenge Tracker**: Allow creators to define custom challenges and natively track specific metrics, game items, or events to measure their progress.
 
 ## UX / UI Improvements
-- Refine the map performance table sorting.
-- Add hover effects to the Recent Raids list to show deeper details.
+- **Responsive Reflow Layout**: CSS-native responsive reflow for seamless module scaling across viewports.
+- **Table Sorting**: Refine the map performance table sorting.
+- **Hover States**: Add hover effects to the Recent Raids list to show deeper details.
 
 ## Known Issues
-- Currently tracking none.
+- **Missing API Assets**: Certain newer blueprints (e.g., Extended Barrel II) do not have corresponding image assets available on the public API CDN yet. The UI currently falls back to text-only mode for these items.

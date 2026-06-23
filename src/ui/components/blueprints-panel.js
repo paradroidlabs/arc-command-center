@@ -57,7 +57,7 @@ export function renderBlueprintsPanel(container, { blueprints, items }) {
       }
     }
 
-    const imageHtml = imageUrl ? `<div style="flex: 0 0 60px; margin-right: 12px;"><img src="${imageUrl}" style="width: 100%; border-radius: 4px; object-fit: contain;" alt="${bp.name}" /></div>` : '';
+    const imageHtml = imageUrl ? `<div style="flex: 0 0 60px; margin-right: 12px;"><img src="${imageUrl}" style="width: 100%; border-radius: 4px; object-fit: contain;" alt="${bp.name}" onerror="this.parentElement.style.display='none'" /></div>` : '';
 
     return `
     <div class="mission-card ${isMissing ? '' : 'mission-card--completed'}" style="display: flex; align-items: center; padding: 12px;">

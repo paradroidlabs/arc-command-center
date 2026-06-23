@@ -236,15 +236,15 @@ You're absolutely right, and the meta-lesson here is worth carving in stone: **t
 
 ### Full Session Arc
 
-| Phase | Duration (approx) | Outcome |
-|---|---|---|
-| Dev server launch & initial run | ~5 min | ✅ App running at localhost:3000 |
-| Repo cleanup & stale file removal | ~20 min | ✅ Organized docs/, removed cruft, committed |
-| README.md creation | ~25 min | ✅ Full 195-line README with architecture tree, feature table, badges |
-| Screenshot capture (rounds 1-3) | ~45 min | ⚠️ Committed but imperfect — resolution/whitespace issues, user accepted trade-off |
-| Roadmap: Custom Challenge Tracker | ~3 min | ✅ Added to roadmap.md and committed |
-| GridStack.js integration | ~25 min | ❌ Complete failure — DOM corruption, raw HTML serialization, hard revert |
-| Hard revert & stabilization | ~5 min | ✅ `git checkout .` + `git clean -fd` + `npm uninstall gridstack` |
+| Phase                             | Duration (approx) | Outcome                                                                           |
+| -----------------------------------| -------------------| -----------------------------------------------------------------------------------|
+| Dev server launch & initial run   | ~5 min            | ✅ App running at localhost:3000                                                   |
+| Repo cleanup & stale file removal | ~20 min           | ✅ Organized docs/, removed cruft, committed                                       |
+| README.md creation                | ~25 min           | ✅ Full 195-line README with architecture tree, feature table, badges              |
+| Screenshot capture (rounds 1-3)   | ~45 min           | ⚠️ Committed but imperfect — resolution/whitespace issues, user accepted trade-off |
+| Roadmap: Custom Challenge Tracker | ~3 min            | ✅ Added to roadmap.md and committed                                               |
+| GridStack.js integration          | ~25 min           | ❌ Complete failure — DOM corruption, raw HTML serialization, hard revert          |
+| Hard revert & stabilization       | ~5 min            | ✅ `git checkout .` + `git clean -fd` + `npm uninstall gridstack`                  |
 
 ### Current Repo State (Stable)
 
