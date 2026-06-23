@@ -20,12 +20,14 @@ The **ARC Command Center** is a personalized tactical operations dashboard for *
 ### Coldstart & Refactor (June 23, 2026)
 - Full coldstart from conversation context reconstruction.
 - Verified live API connectivity (200 OK, Level 75 profile rendering).
+- **Architecture lock:** Solidified the 12-column CSS grid and vector CRT aesthetic. Rejected third-party DOM-manipulating libraries (like GridStack.js) in favor of CSS-native responsive reflow to protect the vanilla JS rendering pipeline.
+- **Documentation:** Initialized the Paradroid Labs AI operational framework inside `docs/agent-framework/`.
 
 ---
 
 ## Architecture
 
-```
+```text
 src/
   app.js                  — App shell, tab routing, data fetching
   data/
@@ -49,6 +51,8 @@ src/
     map-intel.js           — Map performance intel
     inventory-status.js    — Stash/loadout status
     charts.js              — Net value graph renderer
+    blueprints-panel.js    — Blueprints archive, missing/acquired rendering
+    blueprint-shortcut.js  — Sidebar progress bar for blueprint completion
 ```
 
 ---
@@ -57,26 +61,31 @@ src/
 
 ### Header Stats Bar
 - **Level**, **Topside Hours**, **Total Raids**, **Survival %**, **Credits**, **ARC Kills**, **Player Kills**
-- **Trials Rank** badge (purple glow) with rank points — pulled from localStorage
+- **Trials Rank** badge (purple glow) with rank points — pulled from localStorage.
 
 ### Dual Countdown Timers (Departure Panel)
-- **Expedition countdown** (amber) — time until departure window opens
-- **Trials reset countdown** (cyan) — time until Monday 07:00 UTC weekly reset
-- Both update every second, visible in minimized and expanded modes
+- **Expedition countdown** (amber) — time until departure window opens.
+- **Trials reset countdown** (cyan) — time until Monday 07:00 UTC weekly reset.
+- Both update every second, visible in minimized and expanded modes.
 
 ### Weekly Trials System
-- **Automatic weekly reset detection** — compares stored `weekResetDate` against current Monday boundary
-- **Inline editors** — click to edit rank title, points, position, trial names, descriptions, and progress
-- **Generated trial card images** — 5 replica images matching current week's trials
-- **Historical tracking** — `arc_trials_history_v2` in localStorage records all-time best scores per trial title for comparison when trials return
+- **Automatic weekly reset detection** — compares stored `weekResetDate` against current Monday boundary.
+- **Inline editors** — click to edit rank title, points, position, trial names, descriptions, and progress.
+- **Historical tracking** — `arc_trials_history_v2` in localStorage records all-time best scores per trial title for comparison when trials return.
+
+### Blueprints Archive
+- Dedicated archive panel categorizing blueprints as MISSING (amber) or ACQUIRED (cyan).
+- Shortcut progress bar on the Tactical Brief dynamically tracking completion percentages.
+- Graceful UI fallback for items lacking public CDN images.
+
+### Advanced Data Visualization
+- **Raid Value History Chart**: Interactive bar chart with toggles for the Last 25 / 50 / 100 raids. Includes detailed hover tooltips breaking down Net Value, Brought In, and Extracted totals.
+- **Raid History Grid**: CSS grid alignments ensuring horizontal parity across dense statistical rows.
 
 ### Live API Data
-- Profile, stash, loadout, quests, projects, hideout, rounds, blueprints
-- Full round pagination (fetches all rounds, not just first page)
-- Rate limit tracking displayed in header
-
-### Currency Refactor
-- All references changed from "seeds" to "credits" across the codebase
+- Profile, stash, loadout, quests, projects, hideout, rounds, blueprints.
+- Full round pagination (fetches all rounds, not just first page).
+- Rate limit tracking displayed in header.
 
 ---
 

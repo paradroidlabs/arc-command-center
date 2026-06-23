@@ -168,6 +168,12 @@ See [changes.md](changes.md) for the full patch notes history, also viewable in-
 
 ---
 
+## 📖 Development Walkthrough
+
+For a comprehensive history of the project's build process, architectural shifts, and local data logic, see the [Development Walkthrough](docs/WALKTHROUGH.md).
+
+---
+
 ## 🛠️ Tech Stack
 
 | Tool | Purpose |
