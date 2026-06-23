@@ -1,0 +1,42 @@
+{
+  "data": {
+    "loadout": {
+      "augment": null,
+      "shield": {
+        "itemId": "__empty_slot__",
+        "name": null,
+        "quantity": 1,
+        "slotIndex": 3,
+        "durabilityPercent": 100
+      },
+      "weapon1": {
+        "itemId": "__empty_slot__",
+        "name": null,
+        "quantity": 1,
+        "slotIndex": 1,
+        "durabilityPercent": 100
+      },
+      "weapon2": {
+        "itemId": "__empty_slot__",
+        "name": null,
+        "quantity": 1,
+        "slotIndex": 2,
+        "durabilityPercent": 100
+      },
+      "backpack": [],
+      "quickItems": [],
+      "safePocket": [],
+      "augmentedSlots": [],
+      "slotCounts": {
+        "backpack": 10,
+        "quickItems": 4,
+        "safePocket": 1,
+        "augmentedSlots": 0
+      }
+    },
+    "syncedAt": "2026-06-23T10:08:18.367Z"
+  },
+  "meta": {
+    "requestId": "1719d4e7-50d2-430e-9284-24eec42b6a66"
+  }
+}

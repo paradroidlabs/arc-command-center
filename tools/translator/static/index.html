@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arc Translator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="status">Waiting for connection...</div>
+        <button id="translate-btn" onclick="triggerTranslation()">Capture & Translate</button>
+        <div id="canvas-container">
+            <canvas id="screenshot-canvas"></canvas>
+            <div id="overlay-container"></div>
+        </div>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>

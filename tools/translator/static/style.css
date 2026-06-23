@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+#status {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 8px 12px;
+    border-radius: 4px;
+    z-index: 100;
+    font-size: 14px;
+    color: #00ffcc;
+    border: 1px solid #00ffcc;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+}
+
+#translate-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 255, 204, 0.2);
+    color: #00ffcc;
+    border: 1px solid #00ffcc;
+    padding: 8px 16px;
+    border-radius: 4px;
+    z-index: 100;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+}
+
+#translate-btn:hover {
+    background: rgba(0, 255, 204, 0.4);
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+}
+
+#translate-btn:active {
+    transform: scale(0.95);
+}
+
+#canvas-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#screenshot-canvas {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+#overlay-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Let clicks pass through if needed */
+}
+
+.translated-box {
+    position: absolute;
+    background-color: rgba(15, 15, 15, 0.95);
+    color: #00ffcc; /* Neon cyan/green Arc Raiders style */
+    border: 1px solid #00ffcc;
+    padding: 2px 4px;
+    box-sizing: border-box;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: visible; /* Let text spill out if the box is tiny */
+    white-space: nowrap; /* Keep it on one line since OCR bounds are per-line */
+    text-shadow: 0 0 3px rgba(0, 255, 204, 0.5), 0 0 5px rgba(0,0,0,1); /* Added dark backdrop shadow for readability */
+    border-radius: 2px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+}

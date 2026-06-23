@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARC Command Center — _paradroid</title>
+  <meta name="description" content="Personalized tactical command center for ARC Raiders. Live data, mission priorities, and session tracking." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/index.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Scan-line overlay -->
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <div id="app-layout">
+      <!-- Sidebar -->
+      <aside id="sidebar" class="sidebar"></aside>
+
+      <!-- Main Content Area -->
+      <div id="content-wrapper">
+        <!-- Header -->
+        <header id="header" class="header"></header>
+
+        <!-- Main content grid -->
+    <main id="tab-dashboard" class="main-grid">
+      <!-- Mission Brief — spans full width -->
+      <section id="action-panel" class="panel panel--mission"></section>
+
+      <!-- Left column -->
+      <div class="col-left">
+        <section id="project-tracker" class="panel"></section>
+        <section id="quest-tracker" class="panel"></section>
+        <section id="blueprint-shortcut" class="panel"></section>
+      </div>
+
+      <!-- Right column -->
+      <div class="col-right">
+        <section id="session-log" class="panel"></section>
+        <section id="map-intel" class="panel"></section>
+        <section id="inventory-status" class="panel"></section>
+      </div>
+    </main>
+
+    <!-- Weapons & Stats View -->
+    <main id="tab-weapons" class="main-grid" style="display: none;">
+      <section id="weapons-panel" class="panel panel--full-width"></section>
+    </main>
+
+    <!-- Trials & Rank View -->
+    <main id="tab-trials" class="main-grid" style="display: none;">
+      <section id="trials-panel-container" class="panel panel--full-width"></section>
+    </main>
+
+    <!-- Raid History View -->
+    <main id="tab-history" class="main-grid" style="display: none;">
+      <section id="history-panel-container" class="panel panel--full-width"></section>
+    </main>
+
+    <!-- Blueprints View -->
+    <main id="tab-blueprints" class="main-grid" style="display: none;">
+      <section id="blueprints-panel-container" class="panel panel--full-width"></section>
+    </main>
+
+    <!-- System Logs View -->
+    <main id="tab-logs" class="main-grid" style="display: none;">
+      <section id="logs-panel-container" class="panel panel--full-width markdown-body" style="padding: 32px; overflow-y: auto;"></section>
+    </main>
+
+      </div> <!-- End content-wrapper -->
+    </div> <!-- End app-layout -->
+
+    <!-- Loading overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+      <div class="loading-spinner"></div>
+      <p class="loading-text">CONNECTING TO ARC NETWORK...</p>
+    </div>
+
+    <!-- Error toast container -->
+    <div id="toast-container" class="toast-container"></div>
+  </div>
+
+  <script type="module" src="/src/app.js"></script>
+</body>
+</html>

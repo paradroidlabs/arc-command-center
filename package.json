@@ -1,0 +1,18 @@
+{
+  "name": "arc-command-center",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "ARC Raiders Command Center — personalized tactical mission planner",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  },
+  "dependencies": {
+    "marked": "^18.0.5"
+  }
+}
