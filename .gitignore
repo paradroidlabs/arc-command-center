@@ -1,5 +1,24 @@
+# Dependencies
 node_modules
+
+# Build output
 dist
+
+# Environment
 .env
 .env.local
+
+# Logs
 *.log
+
+# Python
+__pycache__/
+venv/
+*.pyc
+
+# Binary/research artifacts
+*.pdf
+
+# OS files
+.DS_Store
+Thumbs.db
